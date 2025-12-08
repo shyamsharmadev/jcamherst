@@ -13,7 +13,11 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jcamherst.social",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -24,7 +28,22 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "name": "JC Amherst App",
+      "shortName": "JC Amherst",
+      "lang": "en",
+      "scope": "/",
+      "themeColor": "#007bff",
+      "description": "JC Amherst Progressive Web App",
+      "orientation": "portrait",
+      "display": "standalone",
+      "startUrl": "/",
+      "backgroundColor": "#ffffff"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4dfb166e-fd52-4e3c-91a4-635a9bfc82f5"
+      }
     }
   }
 }
