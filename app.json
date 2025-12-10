@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "jca-app",
+    "name": "JCA Social",
     "slug": "jca-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -20,6 +20,7 @@
       }
     },
     "android": {
+      "package": "com.jcamherst.social",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
