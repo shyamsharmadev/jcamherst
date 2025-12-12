@@ -2,7 +2,7 @@
   "expo": {
     "name": "JCA Social",
     "slug": "jca-app",
-    "version": "1.0.0",
+    "version": "1.0.8",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -13,6 +13,7 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
+      "buildNumber": "8",
       "supportsTablet": true,
       "bundleIdentifier": "com.jcamherst.social",
       "infoPlist": {
@@ -45,6 +46,11 @@
       "eas": {
         "projectId": "4dfb166e-fd52-4e3c-91a4-635a9bfc82f5"
       }
+    },
+    "expo": {
+      "name": "jcaapp",
+      "slug": "jcaapp",
+      "icon": "./assets/icon.png"
     }
   }
 }

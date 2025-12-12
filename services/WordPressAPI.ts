@@ -113,6 +113,26 @@ class WordPressAPI {
       throw error;
     }
   }
+
+  async sendTestNotification(): Promise<TestNotificationResponse> {
+    try {
+      const response = await fetch(`${API_BASE_URL}/send-test-notification`, {
+        method: 'POST',
+        headers: this.getHeaders(),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Test notification failed');
+      }
+
+      return data;
+    } catch (error) {
+      console.error('Send test notification error:', error);
+      throw error;
+    }
+  }
 }
 
 export default new WordPressAPI();

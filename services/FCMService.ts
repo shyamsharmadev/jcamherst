@@ -72,6 +72,7 @@ class FCMService {
             projectId: Constants.expoConfig?.extra?.eas?.projectId,
           });
           console.log('Expo push token obtained');
+          console.log('Full Expo push token:', token.data);
           return token.data;
         } catch (expoError) {
           console.log('Failed to get Expo push token (may need project ID configured):', expoError);
@@ -82,6 +83,7 @@ class FCMService {
       // For standalone builds, get the native device token
       const token = await Notifications.getDevicePushTokenAsync();
       console.log('Native device token obtained');
+      console.log('Full native device token:', token.data);
       return token.data;
     } catch (error) {
       console.error('Error getting device token:', error);
@@ -137,6 +139,18 @@ class FCMService {
       },
       trigger: null, // Send immediately
     });
+  }
+
+  async sendTestNotificationToAllUsers(): Promise<any> {
+    try {
+      const WordPressAPI = (await import('./WordPressAPI')).default;
+      const result = await WordPressAPI.sendTestNotification();
+      console.log('Test notification sent to all users:', result);
+      return result;
+    } catch (error) {
+      console.error('Error sending test notification to all users:', error);
+      throw error;
+    }
   }
 }
 
